@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<util:map map-class="java.util.HashMap" id="mybrandColor">
+<entry key="BMW" value="Blue"></entry>
+<entry key="Suzuki" value="Black"></entry>
+<entry key="jagvar" value="Gold" ></entry>
+</util:map>
+
+<bean id="mycar" class="com.spring.Car" >
+<property name="id" value="1111"> </property>
+<property name="cost" value="5000000.0"> </property>
+<property name="brandColor" ref="mybrandColor"> </property>
+</bean>
+</beans>
