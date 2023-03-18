@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="person1" class="com.spring.Person">
+		<property name="id" value="111"></property>
+		<property name="name" value="manju"></property>
+		<property name="age" value="23"></property>
+		<property name="gender" value="male"></property>
+	</bean>
+	<bean id="person2" class="com.spring.Person">
+		<property name="id">
+		<value>112</value>
+		</property>
+			<property name="name">
+		<value>mbk</value>
+		</property>
+			<property name="age">
+		<value>25</value>
+		</property>
+			<property name="gender">
+		<value>male</value>
+		</property>
+			</bean>
+	<bean id="person3" class="com.spring.Person" p:id="113" p:name="manjunath" p:age="23" p:gender="male">
+	</bean>
+</beans>

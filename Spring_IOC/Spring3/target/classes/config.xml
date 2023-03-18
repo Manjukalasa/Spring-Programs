@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="per1" class="com.spring1.Person1">
+		<constructor-arg name="pid" value="101"></constructor-arg>
+		<constructor-arg name="pname" value="manjukalasa"></constructor-arg>
+		<constructor-arg name="page" value="23"></constructor-arg>
+		<constructor-arg name="pgender" value="male"></constructor-arg>
+	</bean>
+	
+		<bean id="per2" class="com.spring1.Person1">
+		<constructor-arg name="pid">
+		<value>102</value>
+		</constructor-arg>
+			<constructor-arg name="pname">
+		<value>mbk </value>
+		</constructor-arg>
+			<constructor-arg name="page">
+		<value>25</value>
+		</constructor-arg>
+			<constructor-arg name="pgender">
+		<value>male</value>
+		</constructor-arg>
+			</bean>
+	<bean id="per3" class="com.spring1.Person1" c:pid="103" c:pname="manjunath" c:page="23" c:pgender="male">
+	</bean>
+</beans>
